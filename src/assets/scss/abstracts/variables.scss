@@ -1,0 +1,20 @@
+// Colors
+$black: #000000;
+$white: #ffffff;
+$line-color: #a52a2a;
+$cross-color: rgb(253, 0, 0);
+$zero-color: #28a745;
+$info-color: #41c627;
+$cell-hover-color: #f0ffff;
+$button-background-color: linear-gradient(45deg, #41c627, transparent);
+$button-hoher-background-color: linear-gradient(180deg, #41c627, transparent);
+
+$field-border: solid #000;
+$zero-border: 1px solid $zero-color;
+
+// Fonts
+$primary-font: "monospace";
+$secondary-font: "Arial";
+
+// Other
+$base-transition: all 0.5s ease;

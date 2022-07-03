@@ -1,0 +1,13 @@
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 2rem;
+  padding: 2rem;
+  background: $button-background-color;
+  &:hover {
+    background: $button-hoher-background-color;
+  }
+  &:first-child {
+    margin-right: 2rem;
+  }
+}

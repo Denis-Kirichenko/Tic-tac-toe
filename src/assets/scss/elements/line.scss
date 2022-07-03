@@ -1,0 +1,44 @@
+.line {
+  position: absolute;
+  z-index: 1;
+  background-color: $line-color;
+  transition: max-height 0.5s ease, max-width 0.5s ease;
+  max-height: 0%;
+  max-width: 0%;
+  &.horizontal {
+    max-height: 10%;
+    height: 2px;
+    width: 100%;
+  }
+  &.vertical {
+    height: 100%;
+    max-width: 10%;
+    width: 2px;
+  }
+  &.left,
+  &.right {
+    height: 2px;
+    max-height: 10%;
+    width: 100%;
+    &.active {
+      max-width: 100%;
+    }
+  }
+  &.left {
+    transform: rotate(45deg);
+    top: 0;
+    left: 0;
+    &.active {
+      max-width: 100%;
+    }
+  }
+  &.right {
+    transform: rotate(135deg);
+  }
+  &.horizontal.active {
+    max-width: 100%;
+  }
+  &.vertical.active {
+    max-height: 100%;
+  }
+}

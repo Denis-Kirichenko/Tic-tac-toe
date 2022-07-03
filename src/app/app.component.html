@@ -1,0 +1,33 @@
+<div class="wrapper">
+  <main class="main">
+    <div class="container" [class.blur]="stateIsBlur$.value">
+      <div class="field">
+        <ng-container *ngFor="let cell of fieldCells;let i = index">
+          <div class="cell" (click)="makeTurn(i)">
+            <ng-container *ngIf="cell">
+              <div [ngClass]="isZero(i)?'zero':'cross'">
+                <span></span>
+              </div>
+            </ng-container>
+          </div>
+        </ng-container>
+      </div>
+      <div class="info-container">
+        <h2 id="info-head">{{infoHead}}</h2>
+        <div>
+          <h4 class="start-heading" style="text-align: center;">{{infoMessage}}</h4>
+          <div class="button-container">
+            <button class="btn" (click)="startGame(true)">Один на один</button>
+            <button class="btn" (click)="startGame(false)">Против компьютера</button>
+          </div>
+        </div>
+      </div>
+      <div #line class="line" [ngClass]="currentLine?.class || ''" [class.active]="stateLineIsShow$.value"
+        [ngStyle]="{'top':  currentLine?.top + '%', 'left': currentLine?.left + '%'}">
+      </div>
+      <div class="info-message " [class.hide]="!stateInfoMessageIsShow$.value">
+        Первым ходит нолик
+      </div>
+    </div>
+  </main>
+</div>
